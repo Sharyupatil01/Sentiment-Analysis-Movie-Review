@@ -27,7 +27,7 @@ This project demonstrates a machine learning pipeline for performing sentiment a
 
 >> Install Dependencies: You need to install the required Python libraries. Open your terminal or command prompt and run the following command:
 
->> <b><i>pip install pandas scikit-learn<i/></br>
+ >><b><i>pip install pandas scikit-learn</i></b>
 
 >> Run the Script: Navigate to the project's directory in your terminal and execute the Python script.
 
