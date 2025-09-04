@@ -1,51 +1,75 @@
-# Sentiment-Analysis-Movie-Review
+# 🎬 Sentiment Analysis on Movie Reviews  
 
-This project demonstrates a machine learning pipeline for performing sentiment analysis on movie reviews. It uses a logistic regression model to classify a review as either positive or negative. The project is designed to be a clear and beginner-friendly introduction to natural language processing (NLP) and machine learning.
+This project demonstrates a complete **machine learning pipeline** for performing sentiment analysis on IMDB movie reviews. Using **Logistic Regression** with **TF-IDF features**, the model classifies reviews as either **positive** or **negative**.  
 
-# Key Features 🔑
-> Data Preprocessing: Cleans raw text data by removing HTML tags, punctuation, and common English "stop words."
+The project is designed as a **beginner-friendly introduction** to **Natural Language Processing (NLP)** and **Machine Learning** concepts.  
 
-> Feature Extraction: Converts text into a numerical format that a machine learning model can understand using *TF-IDF* (Term Frequency-Inverse Document    Frequency).
+---
 
-> Model Training: Trains a Logistic Regression classifier on the preprocessed data.
+## ✨ Key Features  
 
-> Model Evaluation: Provides key performance metrics like accuracy, precision, and recall to assess the model's effectiveness.
+- **Data Preprocessing**: Cleans raw text by removing HTML tags, punctuation, and stop words.  
+- **Feature Extraction**: Converts reviews into numerical form using **TF-IDF (Term Frequency–Inverse Document Frequency)**.  
+- **Model Training**: Implements a **Logistic Regression classifier** to learn sentiment patterns.  
+- **Evaluation**: Provides performance metrics such as **accuracy, precision, recall, and F1-score**.  
+- **Prediction**: Demonstrates sentiment prediction on new, unseen reviews.  
 
-> Prediction: Shows how to use the trained model to predict the sentiment of a new, unseen movie review.
+---
 
-#  ↗️ Project Structure 
-↳ IMDB Dataset.csv: The dataset containing 50,000 movie reviews and their corresponding sentiments.
+## 📂 Project Structure  
 
-↳ sentiment_analyzer.py: The Python script that contains all the code for data loading, preprocessing, model training, and evaluation.
+├── IMDB Dataset.csv                                   # Dataset with 50,000 reviews & sentiment labels
 
-↳ README.md: This file, which explains the project.
+├── sentiment_analyzer.py                             # Core script (data loading, preprocessing, training, evaluation)
 
-#  How to Run the Project 🟡
->> Prerequisites: Make sure you have Python 3.x installed on your computer.
-
->> Clone the Repository: If this project is in a repository, use git clone [repository_url]. Otherwise, just make sure all the project files (the CSV file and the Python script) are in the same folder.
-
->> Install Dependencies: You need to install the required Python libraries. Open your terminal or command prompt and run the following command:
-
- >><b><i>pip install pandas scikit-learn</i></b>
-
->> Run the Script: Navigate to the project's directory in your terminal and execute the Python script.
+└── README.md                 # Project documentation
 
 
->> python sentiment_analyzer.py
->> The script will print the step-by-step progress, including the model's accuracy and the final prediction on a sample review.
+---
 
-# How the Model Works ⚒️
-The project follows a standard machine learning workflow for text classification:
+## 🚀 Getting Started  
 
-<b>Data Loading </b>: The IMDB Dataset.csv is loaded into a pandas DataFrame.
+### 🔧 Prerequisites  
+- Python 3.x  
+- Required libraries: `pandas`, `scikit-learn`  
 
-<b>Text Preprocessing </b>: The raw text in the review column is cleaned. This involves converting all text to lowercase, removing unnecessary characters, and deleting common words (like 'the', 'a', 'is') that don't carry much sentiment.
+### 📥 Installation & Setup  
 
-<b>Vectorization </b>: The cleaned text is transformed into a numerical matrix using a TfidfVectorizer. This process turns each review into a set of numbers that represent the importance of each word within the review.
+1. **Clone the Repository**  
+   ```bash
+   git clone [repository_url]
+   cd Sentiment-Analysis-Movie-Review
+2. **Install Dependencies**
+   ```bash
+   pip install pandas scikit-learn
+4. **Run the Script**
+   ```bash
+   python sentiment_analyzer.py
 
-<b>Training </b>: The numerical data is split into a training set and a testing set. A Logistic Regression model is trained on the training data to learn the relationship between the words and the sentiment.
+## ⚙️ How the Model Works
 
-<b>Evaluation </b>: The trained model's performance is tested on the unseen data to ensure it can make accurate predictions on new reviews.
+The pipeline follows a standard text classification workflow:
 
-<b>Prediction</b>: The final, trained model is used to classify the sentiment of a new review, demonstrating its real-world application.
+Data Loading: Load the IMDB dataset into a Pandas DataFrame.
+
+**Text Preprocessing**:
+
+   1) Convert text to lowercase
+
+   2) Remove HTML tags, punctuation, and stop words
+
+**Vectorization**: Use TfidfVectorizer to transform text into numerical vectors.
+
+**Training**: Split data into training/testing sets and train a Logistic Regression model.
+
+**Evaluation**: Test on unseen data and compute evaluation metrics.
+
+**Prediction**: Use the trained model to classify new reviews as positive or negative.
+
+# 📊 Example Output
+
+**Training Progress**: Displays data preprocessing, vectorization, and model training steps.
+
+**Evaluation Metrics**: Accuracy, precision, recall, and F1-score.
+
+**Prediction**: Example sentiment classification on a sample review.
